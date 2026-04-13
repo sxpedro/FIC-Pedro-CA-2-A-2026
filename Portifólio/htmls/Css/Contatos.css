@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primaria: #4f46e5;
+    --secudaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navegacao{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    background-color: var(--vidro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    list-style: none;
+    margin-left: 35px;
+}
+.menu-link{
+    position: relative;
+    font-size: 20px;
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.menu-link:hover{
+    color: var(--secudaria);
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secudaria);
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+main{
+    padding: 120px 9% 60px; 
+    background-color: var(--maisEscuro);
+    text-align: center;
+}
+
+main h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.formulario-contato{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.grupo-form{
+    margin-bottom: 20px;
+}
+
+.campo-form,
+.text-form{
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: var(--vidro);
+    backdrop-filter: blur(10px);
+    color: var(--claro);
+    outline: none;
+    transition: 0.3s;
+}
+
+.campo-form::placeholder,
+.text-form::placeholder{
+    color: rgba(226, 232, 240, 0.6);
+}
+
+.campo-form:focus,
+.text-form:focus{
+    border-color: var(--secudaria);
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
+}
+
+.text-form{
+    height: 130px;
+    resize: none;
+}
+
+.botao-whatsapp{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, var(--primaria), var(--secudaria));
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.botao-whatsapp:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 18px var(--secudaria);
+}

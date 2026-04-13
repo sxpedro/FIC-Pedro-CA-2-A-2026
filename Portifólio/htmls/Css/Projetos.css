@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primaria: #4f46e5;
+    --secudaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navegacao{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    background-color: var(--vidro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    list-style: none;
+    margin-left: 35px;
+}
+.menu-link{
+    position: relative;
+    font-size: 20px;
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.menu-link:hover{
+    color: var(--secudaria);
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secudaria);
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+.Projetos{
+    padding: 120px 9% 60px; 
+    background-color: var(--maisEscuro);
+    text-align: center;
+}
+
+.Projetos-titulo{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--claro);
+}
+
+.Projeto-caixa{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+projetos-card{
+    background: var(--vidro);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 25px;
+    width: 320px;
+    transition: 0.4s ease;
+}
+
+projetos-card:hover{
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--secudaria);
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.3);
+}
+
+projetos-card img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.info-projetos{
+    font-size: 1.4rem;
+    color: var(--secudaria);
+    margin-bottom: 10px;
+}
+
+.paragrafo-projetos{
+    font-size: 0.95rem;
+    color: var(--claro);
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+projetos-card a{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, var(--primaria), var(--secudaria));
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+projetos-card a:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+}

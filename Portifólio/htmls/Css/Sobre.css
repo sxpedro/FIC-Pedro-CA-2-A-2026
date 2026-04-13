@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primaria: #4f46e5;
+    --secudaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navegacao{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    background-color: var(--vidro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000%;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    list-style: none;
+    margin-left: 35px;
+}
+.menu-link{
+    position: relative;
+    font-size: 20px;
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.menu-link:hover{
+    color: var(--secudaria);
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secudaria);
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+.apresentação {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 60px; 
+}
+
+.apresentação div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.perfil {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primaria);
+  box-shadow: 
+    0 0 25px var(--primaria),
+    0 0 60px var(--secudaria);
+  margin-bottom: 25px;
+}
+
+.apresentação h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.apresentação p {
+  font-size: 1.1rem;
+  color: var(--secudaria);
+}
+
+.Sobre {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sobre-titulo {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.sobre-caixa {
+  max-width: 500px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 0 12px var(--secudaria);
+}
+
+.sobre-caixa p {
+  color: #d0e7ff;
+  line-height: 1.6;
+  font-size: 1rem;
+}
